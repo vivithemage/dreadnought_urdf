@@ -1,32 +1,42 @@
-<robot name="myfirst">
+<robot name="dreadnought">
+
+  <!-- Links section -->
+  <link name="world"></link> 
+
   <link name="base_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <!-- <cylinder length="0.6" radius="0.2"/> -->
-        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1Body-converted-binary.stl"/>
+      <geometry>        
+        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1Body-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
-      <material name="Gray">
-          <color rgba="0.5 0.5 0.5 1.0"/>
-      </material>
-    </visual>
-  </link>
-  <link name="left_arm_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <!-- <cylinder length="0.6" radius="0.2"/> -->
-        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1RArm-converted-binary.stl"/>
-      </geometry>
-      <material name="Gray">
-          <color rgba="0.5 0.5 0.5 1.0"/>
+      <material name="Green">
+          <color rgba="0.2 1 0.2 1"/>
       </material>
     </visual>
   </link>
 
-  <joint name="base_to_right_arm" type="fixed">
+  <link name="right_arm_link">
+    <visual>
+      <origin xyz="-0.80 -1.7 -2.3" rpy="0 0 0"/>
+      <geometry>        
+        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1RArm-converted-binary.stl" scale="0.1 0.1 0.1"/>
+      </geometry>
+      <material name="Blue">
+          <color rgba="0.2 0.2 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Joints section -->
+  <joint name="world_to_base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 -0.5"/>
+  </joint>
+
+  <joint name="base_to_right_arm_joint" type="continuous">
     <parent link="base_link"/>
-    <child link="left_arm_link"/>
-    <origin xyz="0 -0.22 0.25"/>
+    <child link="right_arm_link"/>
+    <origin xyz="0.8 1.7 2.2"/>
   </joint>
 </robot>
