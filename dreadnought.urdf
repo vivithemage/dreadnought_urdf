@@ -11,7 +11,7 @@
         <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1Body-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
       <material name="Green">
-          <color rgba="0.2 1 0.2 1"/>
+        <color rgba="0.2 1 0.2 1"/>
       </material>
     </visual>
   </link>
@@ -23,7 +23,7 @@
         <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1RArm-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
       <material name="Blue">
-          <color rgba="0.2 0.2 1 1"/>
+        <color rgba="0.2 0.2 1 1"/>
       </material>
     </visual>
   </link>
@@ -35,28 +35,18 @@
         <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1larm-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
       <material name="Blue">
-          <color rgba="0.1 0.2 1 1"/>
+        <color rgba="0.1 0.2 1 1"/>
       </material>
     </visual>
   </link>
 
-  <!-- <link name="legs_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>        
-        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnoughtV1Legs-converted-binary.stl" scale="0.1 0.1 0.1"/>
-      </geometry>
-      <material name="Blue">
-          <color rgba="0.2 0.2 1 1"/>
-      </material>
-    </visual>
-  </link> -->
+
 
   <!-- Joints section -->
   <joint name="world_to_base_joint" type="fixed">
     <parent link="world"/>
     <child link="base_link"/>
-    <origin xyz="0 0 -0.5"/>
+    <origin xyz="1 1 0"/>
   </joint>
 
   <joint name="base_to_right_arm_joint" type="continuous">
@@ -71,11 +61,23 @@
     <origin xyz="2.8 1.7 2.2"/>
   </joint>
 
-  <!-- <joint name="base_to_legs_joint" type="continuous">
+  <link name="legs_link">
+    <visual>
+      <origin xyz="0 0 -1.5" rpy="0 0 0"/>
+      <geometry>        
+        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnoughtV1Legs-converted-binary.stl" scale="0.1 0.1 0.1"/>
+      </geometry>
+      <material name="Blue">
+        <color rgba="0.2 0.2 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_legs_joint" type="continuous">
     <parent link="base_link"/>
     <child link="legs_link"/>
-    <origin xyz="0.8 1.7 2.2"/>
-  </joint> -->
+    <origin xyz="0.0 0 1.5"/>
+  </joint>
 
 
 </robot>
