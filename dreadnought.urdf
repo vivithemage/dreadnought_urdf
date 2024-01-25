@@ -63,7 +63,7 @@
 
   <link name="legs_link">
     <visual>
-      <origin xyz="0 0 -1.5" rpy="0 0 0"/>
+      <origin xyz="-1.75 -1.75 -1.5" rpy="0 0 0"/>
       <geometry>        
         <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnoughtV1Legs-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
@@ -76,7 +76,8 @@
   <joint name="base_to_legs_joint" type="continuous">
     <parent link="base_link"/>
     <child link="legs_link"/>
-    <origin xyz="0.0 0 1.5"/>
+    <origin xyz="1.75 1.75 1.5"/>
+    <axis xyz="0 0 1"/>
   </joint>
 
 
