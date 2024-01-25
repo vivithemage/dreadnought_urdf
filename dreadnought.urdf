@@ -4,7 +4,7 @@
   <!-- Links section -->
   <link name="world"></link> 
 
-  <link name="base_link">
+  <link name="torso_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>        
@@ -45,23 +45,23 @@
   <!-- Joints section -->
   <joint name="world_to_base_joint" type="fixed">
     <parent link="world"/>
-    <child link="base_link"/>
+    <child link="torso_link"/>
     <origin xyz="1 1 0"/>
   </joint>
 
   <joint name="base_to_right_arm_joint" type="continuous">
-    <parent link="base_link"/>
+    <parent link="torso_link"/>
     <child link="right_arm_link"/>
     <origin xyz="0.8 1.7 2.2"/>
   </joint>
 
   <joint name="base_to_left_arm_joint" type="continuous">
-    <parent link="base_link"/>
+    <parent link="torso_link"/>
     <child link="left_arm_link"/>
     <origin xyz="2.8 1.7 2.2"/>
   </joint>
 
-  <link name="legs_link">
+  <link name="base_link">
     <visual>
       <origin xyz="-1.75 -1.75 -1.5" rpy="0 0 0"/>
       <geometry>        
@@ -74,8 +74,8 @@
   </link>
 
   <joint name="base_to_legs_joint" type="continuous">
-    <parent link="base_link"/>
-    <child link="legs_link"/>
+    <parent link="torso_link"/>
+    <child link="base_link"/>
     <origin xyz="1.75 1.75 1.5"/>
     <axis xyz="0 0 1"/>
   </joint>
