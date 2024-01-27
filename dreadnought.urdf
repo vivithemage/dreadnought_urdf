@@ -18,7 +18,7 @@
 
   <link name="right_arm_link">
     <visual>
-      <origin xyz="-0.8 -1.7 -2.3" rpy="0 0 0"/>
+      <origin xyz="-0.8 -1.7 0" rpy="0 0 0"/>
       <geometry>        
         <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1RArm-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
@@ -30,7 +30,7 @@
 
   <link name="left_arm_link">
     <visual>
-      <origin xyz="-2.83 -1.8 -2.3" rpy="0 0 0"/>
+      <origin xyz="-2.83 -1.8 0" rpy="0 0 0"/>
       <geometry>        
         <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1larm-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
@@ -42,7 +42,7 @@
 
   <link name="base_link">
     <visual>
-      <origin xyz="-1.75 -1.75 -1.5" rpy="0 0 0"/>
+      <origin xyz="-1.75 -1.75 0" rpy="0 0 0"/>
       <geometry>        
         <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnoughtV1Legs-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
@@ -62,21 +62,21 @@
   <joint name="torso_to_right_arm_joint" type="revolute">    
     <parent link="root_link"/>
     <child link="right_arm_link"/>
-    <origin xyz="0.8 1.7 2.2"/>
+    <origin xyz="0.8 1.7 0.7"/>
     <limit effort="1000.0" lower="-1.5" upper="0.5" velocity="0.5"/>
   </joint>
 
   <joint name="torso_to_left_arm_joint" type="revolute">
     <parent link="root_link"/>
     <child link="left_arm_link"/>
-    <origin xyz="2.8 1.7 2.2"/>
+    <origin xyz="2.8 1.7 0.7"/>
     <limit effort="1000.0" lower="-2.5" upper="0.5" velocity="0.5"/>
   </joint>
 
   <joint name="torso_to_legs_joint" type="continuous">
     <parent link="root_link"/>
     <child link="base_link"/>
-    <origin xyz="1.75 1.75 1.5"/>
+    <origin xyz="1.75 1.75 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
