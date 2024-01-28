@@ -1,4 +1,4 @@
-<!-- ros2 launch urdf_tutorial display.launch.py model:='/home/vivi/ws_moveit2/src/custom_robot/dreadnought.urdf'  -->
+<!-- ros2 launch dreadnought_urdf display.launch.py model:='/home/vivi/ws_moveit2/src/custom_robot/dreadnought.urdf'  -->
 <robot name="dreadnought">
 
   <!-- Links section -->
@@ -8,7 +8,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>        
-        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1Body-converted-binary.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="package://dreadnought_urdf/stl/binary/DreadnaughtV1Body-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
       <material name="Green">
         <color rgba="0.2 1 0.2 1"/>
@@ -20,7 +20,7 @@
     <visual>
       <origin xyz="-0.8 -1.7 -2.3" rpy="0 0 0"/>
       <geometry>        
-        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1RArm-converted-binary.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="package://dreadnought_urdf/stl/binary/DreadnaughtV1RArm-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
       <material name="Blue">
         <color rgba="0.2 0.2 1 1"/>
@@ -32,7 +32,7 @@
     <visual>
       <origin xyz="-2.83 -1.8 -2.3" rpy="0 0 0"/>
       <geometry>        
-        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnaughtV1larm-converted-binary.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="package://dreadnought_urdf/stl/binary/DreadnaughtV1larm-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
       <material name="Blue">
         <color rgba="0.1 0.2 1 1"/>
@@ -44,7 +44,7 @@
     <visual>
       <origin xyz="-1.75 -1.75 0" rpy="0 0 0"/>
       <geometry>        
-        <mesh filename="file:///home/vivi/ws_moveit2/src/custom_robot/stl/DreadnoughtV1Legs-converted-binary.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="package://dreadnought_urdf/stl/binary/DreadnoughtV1Legs-converted-binary.stl" scale="0.1 0.1 0.1"/>
       </geometry>
       <material name="Blue">
         <color rgba="0.2 0.2 1 1"/>
