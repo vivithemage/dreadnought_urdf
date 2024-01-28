@@ -4,11 +4,11 @@
 
 ## Overview
 
-A basic urdf for a dreadnought model. There are three movable joints: left arm, right arm and the torso. Unfortunately the mesh file does not have any movable parts so there is no walking functionaltiy.
+A basic urdf for a dreadnought model. There are three movable joints: left arm, right arm and the torso. Unfortunately the mesh file does not have any movable parts so there is no walking functionality.
 
 This is a first attempt at making a robot model for use in rviz/gazebo.
 
-If you would like to try making one yourself, take a look at:
+If you would like to try making one yourself or improving this model, take a look at:
 * ["Building a Visual Robot Model with URDF from Scratch"](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch)
 * [How do we describe a robot? With URDF! | Getting Ready to build Robots with ROS #7](https://www.youtube.com/watch?v=CwdbsvcpOHM&ab_channel=ArticulatedRobotics)
 
@@ -29,9 +29,8 @@ There is also an [update script](urdf_updater/updater.py) which allows for updat
 
 ## Credits
 
-[Model mesh](https://cults3d.com/en/3d-model/art/dreadnought-base-model-with-extra-arms) by Geddraz
-
-Based on the [urdf_tutorial](https://github.com/ros/urdf_tutorial/) project
+* [Model mesh](https://cults3d.com/en/3d-model/art/dreadnought-base-model-with-extra-arms) by Geddraz
+* Based on the [urdf_tutorial](https://github.com/ros/urdf_tutorial/) project
 
 ## Contributing
 
